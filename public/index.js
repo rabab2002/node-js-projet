@@ -18,7 +18,13 @@ function askLocation() {
         .then(response => response.text())
         .then(data => {
           alert("Coordonnées enregistrées !");
-          document.getElementById("start-exam").style.display = "inline-block";
+          const startBtn = document.getElementById("start-exam");
+          startBtn.style.display = "inline-block";
+
+          // Lorsqu'on clique sur "Démarrer l'examen", on redirige vers l'interface enseignant
+          startBtn.addEventListener("click", () => {
+            window.location.href = "/teacher-dashboard";
+          });
         })
         .catch(err => {
           alert("Erreur de connexion au serveur : " + err.message);
@@ -31,4 +37,4 @@ function askLocation() {
   } else {
     alert("La géolocalisation n'est pas prise en charge.");
   }
-}S
+}
