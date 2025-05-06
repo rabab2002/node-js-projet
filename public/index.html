@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plateforme d'examen</title>
+  <style>
+    /* Ton CSS ici (intégré depuis ton style précédent) */
+
+    #Header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 20px;
+      background: #f9f9f9;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+      height: 40px;
+    }
+
+    .logo {
+      height: 80px;
+      width: 100px;
+    }
+
+    #img-slider {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 100px;
+      background-color: #e8f0e6;
+      gap: 40px;
+      width: 100%;
+    }
+
+    .info {
+      flex: 1;
+      padding-right: 40px;
+    }
+
+    .info h1 {
+      color: rgb(25, 82, 47);
+      font-size: 3rem;
+      font-weight: bold;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .btn-simple {
+      background-color: transparent;
+      color: black;
+      border: 2px solid black;
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    .btn-simple:hover {
+      background-color: #4b8b3b;
+      color: white;
+    }
+
+    .rounded-box {
+      width: 1000px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 50px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10px;
+    }
+
+    .divider {
+      width: 1px;
+      height: 60px;
+      background-color: #ddd;
+    }
+
+    .section {
+      flex: 1;
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+    }
+
+    #start-exam {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="Header">
+    <img src="WhatsApp Image 2025-04-15 à 18.02.48_6265252c.jpg" class="logo" />
+    <nav><i>ESPACE ETUDIANT</i></nav>
+  </header>
+
+  <section id="img-slider">
+    <div class="info">
+      <h1>Bienvenue sur la plateforme d'examen</h1>
+      <h3>Avant de commencer votre examen, veuillez activer la géolocalisation</h3>
+      <button class="btn-simple" onclick="askLocation()">Activer la géolocalisation</button>
+      <button class="btn-simple" id="start-exam">Démarrer l'examen</button>
+    </div>
+    <div class="slide-active">
+      <img src="Illustration 1(1).png" alt="illustration">
+    </div>
+  </section>
+
+  <div class="rounded-box">
+    <div class="section"><img src="user.png" alt=""><br><p>Accès simplifié pour chaque étudiant inscrit.</p></div>
+    <div class="divider"></div>
+    <div class="section"><img src="location.png" alt=""><br><p>Localisation activée pour garantir la sécurité.</p></div>
+    <div class="divider"></div>
+    <div class="section"><img src="Server.png" alt=""><br><p>Stockage sécurisé des résultats et des données.</p></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
